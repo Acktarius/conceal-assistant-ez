@@ -1,6 +1,6 @@
 # conceal-assistant-ez #
 
-to install Conceal Assistant on CCX in just few clicks
+to install Conceal Assistant on CCX-BOX in just few clicks
 
 download both files .deb and .deb.sig in the same folder
 verify signature :
@@ -20,11 +20,11 @@ Preinst : Pre-install checks if you have node, npm, nodemon already installed, i
 
   Then it will place conceal-assistant folder to its destination folder : opt
 
-Postinst : Post-installation installs the dependancies, and copy + enable + start the ccx-assistant.service
+Postinst : Post-installation installs the dependancies, and move + enable + start the ccx-assistant.service
 
 #### 2 for uninstall:
 
-Prerm : Pre-remove stops the service
+Prerm : Pre-remove stops and disable ccx-assistant.service
 
 Postrm : Post-remove deletes the service and conceal-assistant folder
 
