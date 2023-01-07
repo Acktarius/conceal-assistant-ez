@@ -1,4 +1,4 @@
-# conceal-assistant-ez
+# conceal-assistant-ez #
 
 to install Conceal Assistant on CCX in just few clicks
 
@@ -9,4 +9,22 @@ gpg --verify <file>.deb.sig
 ```
 if you're happy with the signature
 then you can right click on the conceal-assistant deb file,
-choose open with other application, select Software Install
+choose open with other application, select Software Install.
+
+## What does it do ? ##
+It includes 4 Bash script :
+
+#### 2 for installation:
+
+Preinst : Pre-install checks if you have node, npm, nodemon already installed, if not they will be installed
+
+  Then it will place conceal-assistant folder to its destination folder : opt
+
+Postinst : Post-installation installs the dependancies, and copy + enable + start the ccx-assistant.service
+
+#### 2 for uninstall:
+
+Prerm : Pre-remove stops the service
+
+Postrm : Post-remove deletes the service and conceal-assistant folder
+
