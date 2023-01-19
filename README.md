@@ -5,11 +5,17 @@ to install Conceal Assistant on CCX-BOX in just few clicks
 download both files .deb and .deb.sig in the same folder
 verify signature :
 ```
-gpg --verify <file>.deb.sig
+gpg --verify <file.deb.sig>
 ```
 if you're happy with the signature
 then you can right click on the conceal-assistant deb file,
 choose open with other application, select Software Install.
+
+OR 
+
+from the terminal :
+
+`sudo dpkg -i <file.deb>`
 
 ## What does it do ? ##
 It includes 4 Bash script :
