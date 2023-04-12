@@ -5,11 +5,13 @@ to install Conceal Assistant on CCX-BOX in just few clicks
 download both files .deb and .deb.sig in the same folder
 verify signature :
 ```
+gpg --keyserver hkp://keyserver.ubuntu.com --search-key F37F5091
+
 gpg --verify <file.deb.sig>
 ```
 if you're happy with the signature
 then you can right click on the conceal-assistant deb file,
-choose open with other application, select Software Install.
+choose open with other application, select **Software Install**.
 
 OR 
 
@@ -22,9 +24,10 @@ It includes 4 Bash script :
 
 #### 2 for installation:
 
-Preinst : Pre-install checks if you have node, npm, nodemon already installed, if not they will be installed
+Preinst : Pre-install checks if you have node, npm, nodemon and sensors already installed, if not they will be installed
 
-  Then it will place conceal-assistant folder to its destination folder : opt
+  Then it will place conceal-assistant folder to its destination folder : /opt
+  and create a **ccx-assistant.service**
 
 Postinst : Post-installation installs the dependancies, and move + enable + start the ccx-assistant.service
 
